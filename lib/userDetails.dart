@@ -23,22 +23,27 @@ class _UserDetailsState extends State<UserDetails> {
           MyCard(
             content: "${widget.users.name}",
           ),
-         InkWell(
-
-         child: Text(
-            "Email:${widget.users.email}",
-          ),
-          onTap:   launchURL("mailto:${widget.users.email}") ,
-         ),
           InkWell(
-            onTap: () => launchURL("tel:${widget.users.phone}"),
+            child: Text(
+              "Email:${widget.users.email}",
+            ),
+            onTap: () {
+              // launchURL("mailto:${widget.users.email}");
+            },
+          ),
+          InkWell(
+            onTap: () {
+              // launchURL("tel:${widget.users.phone}");
+            },
             child: Text(
               "Phone:${widget.users.phone}",
             ),
           ),
           Divider(),
           InkWell(
-              onTap: () => launchURL("https:${widget.users.website}"),
+              onTap: () {
+                // launchURL("https:${widget.users.website}");
+              },
               child: Text(
                 "website:${widget.users.website}",
               )),
