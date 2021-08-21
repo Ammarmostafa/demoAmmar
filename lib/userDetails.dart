@@ -1,5 +1,8 @@
+
+
 import 'package:demoapp/Models/Json1.dart';
 import 'package:demoapp/card.dart';
+import 'package:demoapp/map.dart';
 import 'package:demoapp/reusable.dart';
 import 'package:flutter/material.dart';
 
@@ -47,6 +50,16 @@ class _UserDetailsState extends State<UserDetails> {
               child: Text(
                 "website:${widget.users.website}",
               )),
+         SizedBox(width: 25,
+         height: 25,),
+           IconButton(
+          icon: const Icon(Icons.map),
+          onPressed: () {
+             pushPage(context, MapSample(widget.users.address!.geo));
+          },
+          iconSize: 40,
+        ), 
+          Center(child: Text("The map")),  
         ],
       ),
     );

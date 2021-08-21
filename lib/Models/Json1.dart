@@ -63,8 +63,8 @@ class Address {
 
 class Geo {
     Geo({
-        this.lat,
-        this.lng,
+         this.lat,
+         this.lng,
     });
 
     String? lat;
